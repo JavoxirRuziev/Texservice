@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+
+/* Стилизация контейнера */
+.container {
+    width: 1210px;
+    margin: 0 auto; /* центрирование */
+    padding: 20px;
+}
+
+/* Стилизация шапки */
+.header {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+/* Стилизация навигации */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+}
+
+.nav-menu_item {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo img {
+    height: 50px; /* Регулируйте размер логотипа в соответствии с вашими нуждами */
+}
+
+.location-icon, .time-icon, .tel-icon {
+    margin-right: 10px;
+    width: 24px; /* Размер иконок */
+    height: 24px;
+}
+
+.nav-link, .nav-tel_number {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.nav-link:hover, .nav-tel_number:hover {
+    text-decoration: underline;
+}
+
+/* Стилизация текста времени работы */
+.nav-time-text_title {
+    font-weight: bold;
+}
+
+.nav-time-text_date {
+    color: #666;
+}
+
+/* Отступ для первого элемента меню, чтобы он не слишком прижимался к логотипу */
+.nav-menu_item:first-child {
+    margin-left: 0;
+}
+
+/* Медиа запросы для адаптивности */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .nav {
+        flex-direction: column;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+    }
+
+    .nav-menu_item {
+        margin-top: 10px;
+    }
+}
