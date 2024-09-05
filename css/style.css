@@ -2,8 +2,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0 auto;
     padding: 0;
-    background: #f4f4f4;
     color: #333;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* Стилизация контейнера */
@@ -15,54 +19,86 @@ body {
 
 /* Стилизация шапки */
 .header {
-    background: #fff;
-    border-bottom: 1px solid #ddd;
-    padding: 10px 0;
+    background: #f4f4f4;
 }
 
 /* Стилизация навигации */
 .nav {
+    /* width: 1210px;*/
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: #fff;
 }
 
 .nav-menu {
+    width: 1210px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     list-style: none;
     padding: 0;
-    display: flex;
-    margin: 0;
+    margin: 0 auto;
 }
 
 .nav-menu_item {
-    margin-left: 20px;
     display: flex;
     align-items: center;
+}
+
+.nav-time-text_date{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* или clip, если не нужны многоточия */
+    width: 100%
 }
 
 .nav-logo img {
     height: 50px; /* Регулируйте размер логотипа в соответствии с вашими нуждами */
 }
-
-.location-icon, .time-icon, .tel-icon {
-    margin-right: 10px;
-    width: 24px; /* Размер иконок */
-    height: 24px;
+.nav-logo{
+    width: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #0590D1;
 }
 
-.nav-link, .nav-tel_number {
+.menu-location{
+    display: flex;
+    align-items: center;
+}
+
+.location-icon, .time-icon, .tel-icon {
+    margin-right: 5px;
+}
+
+.nav-link, .nav-tel_number, .nav-tel_number1 {
     text-decoration: none;
     color: #333;
     font-size: 16px;
 }
 
-.nav-link:hover, .nav-tel_number:hover {
+.nav-link:hover, .nav-tel_number:hover, .nav-tel_number1:hover {
     text-decoration: underline;
+}
+
+.nav-tel {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-tel_number1 {
+    margin-bottom: 5px;
 }
 
 /* Стилизация текста времени работы */
 .nav-time-text_title {
     font-weight: bold;
+    margin-bottom: 5px;
 }
 
 .nav-time-text_date {
@@ -71,24 +107,255 @@ body {
 
 /* Отступ для первого элемента меню, чтобы он не слишком прижимался к логотипу */
 .nav-menu_item:first-child {
-    margin-left: 0;
+
 }
 
 /* Медиа запросы для адаптивности */
 @media (max-width: 768px) {
     .container {
         width: 95%;
+        padding: 10px;
     }
 
     .nav {
         flex-direction: column;
+        align-items: center;
     }
 
     .nav-menu {
         flex-direction: column;
+        align-items: center;
     }
 
     .nav-menu_item {
         margin-top: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-logo, .menu-location, .nav-tel {
+        text-align: center; /* Центрирование содержимого на мобильных устройствах */
+    }
+
+    .header-center {
+        flex-direction: column; /* Убедитесь, что header-center адаптируется для мобильных */
+    }
+}
+
+/*СТИЛИ ДЛЯ HEADER-CENTER*/
+
+.header-center{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px;
+    background: #f4f4f4;
+}
+
+.header-center_left{
+    max-width: 438px;
+    margin-right: 100px;
+    position: relative;
+}
+
+.header-center_left::before {
+    content: '';
+    position: absolute;
+    background-image: url(../images/header-photo.svg);
+    width: 841px;   /* Размер контейнера изображения */
+    height: 637px;  /* Высота контейнера изображения */
+    left: 590px;
+    top: -40px;
+    z-index: 2;
+    background-size: 80%;  /* Уменьшение размера изображения до 50% */
+    background-repeat: no-repeat; /* Убедимся, что изображение не повторяется */
+}
+.header-center_left::after{
+    content: '';
+    position: absolute;
+    width: 850px;
+    height: 650px;
+    background: #3CA7DB;
+    border-radius: 650px 0px 0px 0px;
+    left: 500px;
+    top: -115px;
+    z-index: 1;
+}
+
+.textservice {
+    color: #0590D1;
+}
+
+.header-center_left-title {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.header-center_left-subtitle {
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+
+.header-center-link {
+    display: inline-block;
+    padding: 30px 90px;
+    background-color: #0391D3;
+    color: #fff;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    border-radius: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25); 
+    margin-bottom: 40px;
+    transition: 0.3s all;
+}
+
+.header-center-link:hover{
+    background-color: #08171e;
+    color: #a5c9f9;
+}
+
+.header-center_left-comment{
+    font-size: 16px;
+}
+
+.star {
+    color: red;
+}
+
+/*СТИЛИ ДЛЯ header-bottom */
+.header-bottom {
+    padding-bottom: 52px;
+}
+
+.header-bottom_menu {
+    max-width: 500px;
+    display: flex;
+    padding: 0;
+}
+
+.header-bottom_menu-item{
+    text-align: center;
+    list-style: none;
+}
+
+.header-bottom-item__number {
+    color: #0391D3;
+    font-size: 40px;
+    font-weight: bold;  
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu_item {
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-center {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-top: 20px;
+    }
+
+    .header-center_left,
+    .header-center_right {
+        position: static;  /* Сброс позиционирования для мобильных устройств */
+        width: 300px;  /* Растягиваем на всю доступную ширину */
+        margin-right: 0;
+        text-align: center;  /* Центрируем текст внутри блока */
+    }
+
+    .header-center_right {
+        margin-top: 20px;  /* Добавляем отступ сверху для изображения */
+    }
+
+    .header-center-link,
+    .header-center_left-subtitle,
+    .header-center_left-title {
+        padding: 10px 20px;  /* Уменьшаем размеры и отступы */
+    }
+
+    .header-center-link {
+        display: block;  /* Растягиваем кнопку на всю доступную ширину */
+        width: auto;
+        margin: 20px auto;  /* Увеличиваем отступы сверху и снизу */
+    }
+}
+
+@media (max-width: 768px) {
+    .container, .nav-menu, .header-center_left::before, .header-center_left::after {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .nav, .nav-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu_item {
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-logo, .menu-location, .nav-tel {
+        text-align: center;
+    }
+
+    .header-center {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .header-center_left::before, .header-center_left::after {
+        position: static;
+        width: 100%;
+        height: auto;
+        background-size: contain;
+        left: 0;
+        top: 0;
+    }
+
+    .header-center_left {
+        width: auto; /* Автоматическая ширина для лучшей адаптации */
+        margin: 0 auto;
+    }
+
+    .header-bottom_menu {
+        margin: 0 auto;
+    }
+    
+
+    .header-center-link, .header-center_left-subtitle, .header-center_left-title {
+        padding: 10px 20px; /* Уменьшаем размеры и отступы */
+    }
+
+    .header-center-link {
+        display: block;
+        width: auto;
+        margin: 20px auto;
     }
 }
