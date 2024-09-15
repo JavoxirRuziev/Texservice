@@ -16,10 +16,9 @@ a {
 
 /* Стилизация контейнера */
 .container {
-    width: 100%;
-    max-width: 1210px;
-    margin: 0 auto;
-    padding: 20px;
+	max-width: 1920px;
+	margin: 0 auto;
+	padding: 0 75px;
 }
 
 /* Стилизация шапки */
@@ -28,21 +27,37 @@ a {
 }
 
 /* Стилизация навигации----------------------------------------------------- */
-.nav {
+.nav  {
+    background: #fff;
+    padding: 5px;
+}
+
+.nav-wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #fff;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.nav_logo-lang {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 400px;
+    width: 100%;
+    font-size: 18px;
 }
 
 .nav-menu {
-    max-width: 1210px;
+    max-width: 1150px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     list-style: none;
     padding: 0;
-    margin: 0 auto;
+    font-size: 20px;
 }
 
 .nav-menu_item {
@@ -58,10 +73,15 @@ a {
 }
 
 .nav-logo img {
-    height: 50px; /* Регулируйте размер логотипа в соответствии с вашими нуждами */
+    height: 52px;
+    display: flex;             /* Включает Flexbox */
+    align-items: center;       /* Центрирование по вертикали */
+    justify-content: center;   /* Центрирование по горизонтали */
 }
+
 .nav-logo{
-    width: 140px;
+    max-width: 165px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -76,6 +96,11 @@ a {
     align-items: center;
 }
 
+.menu-location_city {
+    color: #000;
+    text-transform: uppercase;
+}
+
 .location-icon, .time-icon, .tel-icon {
     margin-right: 5px;
 }
@@ -83,7 +108,7 @@ a {
 .nav-link, .nav-tel_number, .nav-tel_number1 {
     text-decoration: none;
     color: #333;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .nav-link:hover, .nav-tel_number:hover, .nav-tel_number1:hover {
@@ -120,6 +145,7 @@ a {
     text-transform: uppercase;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25); 
     transition: 0.3s all;
+    margin-left: 10px;
 }
 
 .language:hover{
@@ -139,7 +165,7 @@ a {
 /*СТИЛИ ДЛЯ HEADER-CENTER-----------------------------------------------*/
 
 .header-center {
-    padding: 50px 50px 0px;
+    padding-top: 50px;
     background: #f4f4f4;
 }
 
@@ -154,7 +180,8 @@ a {
 }
 
 .header-center_left{
-    max-width: 438px;
+    max-width: 650px;
+    width: 100%;
     margin-right: 100px;
     position: relative;
 }
@@ -176,12 +203,12 @@ a {
 }
 
 .header-center_left-title {
-    font-size: 36px;
+    font-size: 50px;
     font-weight: 600;
 }
 
 .header-center_left-subtitle {
-    font-size: 20px;
+    font-size: 24px;
     margin-top: 15px;
     margin-bottom: 50px;
 }
@@ -200,6 +227,7 @@ a {
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25); 
     margin-bottom: 40px;
     transition: 0.3s all;
+    font-size: 20px;
 }
 
 .header-center-link:hover{
@@ -217,7 +245,7 @@ a {
 }
 
 .header-center_left-comment{
-    font-size: 16px;
+    font-size: 20px;
     margin-bottom: 50px;
 }
 
@@ -228,7 +256,8 @@ a {
 /*СТИЛИ ДЛЯ header-bottom -------------------------------------------*/
 
 .header-bottom_menu {
-    max-width: 500px;
+    max-width: 600px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -242,8 +271,12 @@ a {
 
 .header-bottom-item__number {
     color: #0391D3;
-    font-size: 40px;
+    font-size: 46px;
     font-weight: bold;  
+}
+
+.header-bottom__item-description {
+    font-size: 20px;
 }
 
 /*ABOUT-US СТИЛИ--------------------------------------------*/
@@ -296,7 +329,7 @@ a {
     flex-wrap: wrap;
     justify-content: center; /* Центрирование логотипов */
     margin: 0 auto; /* Убираем боковые отступы */
-    padding: 0 45px; /* Добавляем паддинг вместо маржина */
+    padding: 0 101px; /* Добавляем паддинг вместо маржина */
 }
 
 .brend-wrap_logo {
@@ -367,149 +400,127 @@ a {
 }
 
 
+/* Базовые стили для медиа-запросов */
+@media (max-width: 1708px) {
+    .nav-menu {
+        max-width: 1000px;
+        width: 100%;
+}
+
+.nav_logo-lang {
+    max-width: 360px;
+    width: 100%;
+}
+
+}
 
 /* Базовые стили для мобильных и планшетов */
-@media (max-width: 1024px) {
-    .container, .nav-menu, .header-center {
-        width: 100%; /* Используем 100% ширины для максимального использования пространства */
-        padding: 10px;
-    }
-
-    .nav, .nav-menu {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav-menu_item {
-        flex-direction: column; /* Вертикальное расположение элементов меню */
-        margin-top: 10px;
-    }
-
-    .header-center {
-        padding: 20px;
-        flex-direction: column; /* Элементы друг под другом для лучшей читаемости */
-        align-items: center;
-    }
-
-    .header-center_left, .header-center_right {
-        width: 100%; /* Полная ширина для каждого блока */
-        margin-right: 0;
-    }
-
-    .header-center_right {
-        margin-top: 20px; /* Отступ для разделения текста и изображения */
-    }
-
-    .nav-logo, .menu-location, .nav-tel {
-        text-align: center;
-    }
-
-    .header-center-link, .header-center_left-title, .header-center_left-subtitle {
-        padding: 10px 20px;
-        font-size: 18px;
-    }
-
-    .header-center-link {
-        width: auto;
-        margin: 20px auto;
-        display: block;
-    }
+@media (max-width: 1537px) {
+    .nav-menu {
+        max-width: 850px;
+        width: 100%;
 }
 
-/* Стили для экранов меньше 768px */
-@media (max-width: 768px) {
-    .header-center_left-title, .header-center_left-subtitle {
-        font-size: 20px; /* Уменьшаем размер шрифта для заголовков */
-    }
+}
+/* Базовые стили для мобильных и планшетов */
 
-    .nav-menu_item {
-        align-items: center;
-    }
-
-    .nav-time-text_date, .nav-tel_number, .nav-link {
-        font-size: 14px; /* Меньший размер шрифта для детальной информации */
-    }
-
-    .brend-wrap_logo {
-        flex-basis: 50%; /* Больше места для каждого логотипа */
+@media (max-width: 1397px) {
+    .nav_logo-lang {
+        max-width: 300px;
+        width: 100%;
     }
 }
+/* Базовые стили для мобильных и планшетов */
 
-/* Стили для самых маленьких экранов */
-@media (max-width: 480px) {
-    .brend-wrap_logo {
-        flex-basis: 100%; /* Один логотип на строку */
-    }
-
-    .header-bottom_menu {
-        flex-direction: column; /* Стек элементов вертикально */
-        align-items: center;
-    }
-
-    .header-bottom_menu-item {
-        margin-bottom: 20px; /* Добавляем пространство между элементами */
-    }
-
-    .header-center-link, .header-center_left-comment {
-        font-size: 16px; /* Уменьшаем шрифт для маленьких экранов */
-    }
-}
-
-body, .nav-link, .nav-tel_number, .nav-tel_number1, .header-center_left-title, .header-center_left-subtitle, .header-bottom-item__number {
-    font-size: 16px; /* Уменьшаем размер шрифта для лучшей адаптации */
-}
-
-/* Медиа-запросы для адаптации под мобильные устройства и планшеты */
-@media (max-width: 1024px) {
-    .container, .nav-menu {
-        padding: 10px; /* Уменьшаем внутренние отступы */
-    }
-
-    .nav {
-        flex-direction: column;
-    }
-
-    .nav-menu_item {
-        flex-direction: column; /* Стек элементов вертикально */
-    }
-
-    .header-center {
-        padding: 20px;
-        flex-direction: column; /* Элементы друг под другом */
-    }
-
-    .header-center_left, .header-center_right {
-        width: 100%; /* Полная ширина для лучшей адаптации */
-        margin-right: 0;
-        text-align: center; /* Центрируем содержимое */
-    }
-}
-
-@media (max-width: 768px) {
-    .header-center_left-title, .header-center_left-subtitle, .header-bottom-item__number {
-        font-size: 14px; /* Дополнительное уменьшение размера шрифта */
-    }
-
-    .brend-wrap_logo {
-        flex-basis: 50%; /* Больше пространства для каждого логотипа */
-    }
-}
-
-@media (max-width: 480px) {
-    .brend-wrap_logo {
-        flex-basis: 100%; /* Один логотип на строку */
+@media (max-width: 1229px) {
+    .nav_logo-lang {
+        max-width: 300px;
+        width: 100%;
     }
 
     .nav-menu {
-        flex-direction: column; /* Вертикальное расположение элементов меню */
+        margin-left: 40px;
+}
+
+}
+
+/* Базовые стили для медиа-запросов */
+@media (max-width: 1024px) {
+
+    .header-center_right {
+
+    }
+
+    .nav-wrap {
+        max-width: 1000px;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .nav_logo-lang {
+        max-width: 862px;
+        width: 100%;
+    }
+
+    .nav-menu {
+        align-items: center;
+        justify-content: space-between;
+        max-width: 862px;
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .nav-menu_item{
+        margin-bottom: 10px;
+    }
+
+    .nav-logo {
+        width: 100%;
+
+    }
+
+    /*heder center 1024 */
+
+    .header-center_left {
+        max-width: 450px;
+        margin-right: 10px;
+    }
+
+    .header-center_left-title {
+        font-size: 32px;
+    }
+
+    .header-center_left-subtitle {
+        font-size: 20px;
+    }
+
+    .header-center-link {
+        padding: 20px 50px;
+        font-size: 18px;
+    }
+
+    .header-center_left-comment {
+        font-size: 18px;
     }
 
     .header-bottom_menu {
-        flex-direction: column; /* Стек элементов вертикально */
-        align-items: center;
+        max-width: 350px;
     }
 
-    .header-bottom_menu-item {
-        margin-bottom: 20px; /* Пространство между элементами */
+    .header-bottom-item__number {
+        font-size: 30px;
+    }
+
+    .header-bottom__item-description {
+        font-size: 14px;
+    }
+
+    .header-center_right {
+        max-width: 420px;
+    }
+
+    .about-us-title::after {
+        right: -10px;
     }
 }
