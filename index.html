@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TexService</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=1.3">
 </head>
 <body>
     <header class="header">
@@ -123,10 +123,32 @@
                     </div>
                     <div class="brend-number">Просто свяжитесь с нами и уточните +998 (93) 128-15-00</div>
                 </div>
-                <div class="brend-text_wrap-right"><button>Заказать звонок</button></div>
+                <div class="brend-text_wrap-right">
+                    <button id="callOrderButton">Заказать звонок</button>
+                </div>
+                <div id="orderForm" class="order-form" style="display: none;" role="form" aria-labelledby="formTitle">
+                    <p id="formTitle" class="visually-hidden">Форма заказа звонка</p>
+                    <form id="orderFormElement" class="form-wrapper" method="POST">
+                        <div class="form-name">
+                            <label for="name">Ваше имя</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-number">
+                            <label for="phone">Ваш телефон</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <p>Чтобы мы могли с вами связаться</p>
+                        <div class="form-button-wrap">
+                            <button class="form-btn" type="submit">Отправить</button>
+                            <div class="form-note">Нажимая на кнопку, я даю согласие на обработку своих персональных данных</div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
+    <script src="https://unpkg.com/inputmask@5.0.9"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

@@ -2,7 +2,6 @@ body {
     font-family: Arial, sans-serif;
     margin: 0 auto;
     padding: 0;
-    color: #333;
     box-sizing: border-box;
 }
 
@@ -18,7 +17,7 @@ a {
 .container {
 	max-width: 1920px;
 	margin: 0 auto;
-	padding: 0 75px;
+	padding: 0 25px;
 }
 
 /* Стилизация шапки */
@@ -177,6 +176,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 0 auto;
 }
 
 .header-center_left{
@@ -329,7 +329,7 @@ a {
     flex-wrap: wrap;
     justify-content: center; /* Центрирование логотипов */
     margin: 0 auto; /* Убираем боковые отступы */
-    padding: 0 101px; /* Добавляем паддинг вместо маржина */
+    padding: 0 160px; /* Добавляем паддинг вместо маржина */
 }
 
 .brend-wrap_logo {
@@ -361,15 +361,158 @@ a {
     border-radius: 20px;
 }
 
-.brend-subtitle {
-    
- }
+.brend-text_wrap-left {
+    font-size: 18px;
+}
+
+.brend-number {
+    color: #605e5e;
+}
 
  .brend-number {
     text-align: center;
  }
 
 .brend-text_wrap-right button {
+    padding: 20px 25px;
+    margin-left: 20px;
+    background-color: #0391D3;
+    color: #fff;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    border-radius: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25); 
+    transition: 0.3s all;
+}
+
+
+.brend-text_wrap-right button:hover{
+    background-color: #08171e;
+    color: #a5c9f9;
+}
+
+.brend-text_wrap-right button:active{
+    background-color: #0da9ec;
+    color: #010a16;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25); 
+    transform: scale(1.2);
+    box-shadow: 0 0 15px 7px rgba(34, 60, 80, 0.2);
+    transition: box-shadow 0.5s, transform 0.5s;
+}
+
+#orderForm {
+    display: none;
+    opacity: 0; /* Начальное значение opacity для скрытия */
+    transition: opacity 0.5s ease-in-out;
+}
+
+.order-form.visible {
+    display: flex;
+    opacity: 1;
+}
+
+.order-form {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    justify-content: center;  /* Центрирование по горизонтали */
+    align-items: center;      /* Центрирование по вертикали */
+    background: rgba(45, 45, 50, 0.4);
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 75px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-name {
+    max-width: 500px;
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-name label {
+    margin-bottom: 5px;
+}
+
+.form-number {
+    max-width: 500px;
+    width: 100%;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-number label {
+    margin-bottom: 5px;
+}
+
+.form-wrapper input {
+    padding: 20px 10px;
+    font-size: 20px;
+    border-radius: 24px;
+    border: 1px solid #d3e8ed;
+    box-shadow: inset 0 4px 12px rgba(81,178,192,0.2);
+}
+
+.form-wrapper input:focus {
+    border: 1px solid #51b2c0;
+}
+
+.form-wrapper input:active {
+    border: 1px solid #51b2c0;
+}
+
+.form-wrapper p {
+    margin-top: 5px;
+    color: #898686;
+}
+
+.form-btn {
+    padding: 20px 30px;
+    background-color: #0391D3;
+    color: #fff;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    border-radius: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25); 
+    transition: 0.3s all;
+}
+
+.form-note {
+    max-width: 400px;
+    width: 100%;
+    font-size: 16px;
+    color: #898686;
+}
+
+.form-button-wrap {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*.brend-text_wrap-right button {
     padding: 10px 15px;
     margin-left: 20px;
     background-color: #0391D3;
@@ -405,16 +548,16 @@ a {
     .nav-menu {
         max-width: 1000px;
         width: 100%;
-}
+    }
 
 .nav_logo-lang {
     max-width: 360px;
     width: 100%;
-}
+    }
 
     .brend-wrap {
-        padding: 0px;
-}
+        padding: 0 60px;
+    }
 
 }
 
@@ -428,7 +571,6 @@ a {
     .brend-wrap_logo {
         margin: 10px;
 }
-
 }
 /* Базовые стили для мобильных и планшетов */
 
@@ -436,6 +578,10 @@ a {
     .nav_logo-lang {
         max-width: 300px;
         width: 100%;
+    }
+
+    .brend-wrap {
+        padding: 0 120px;
     }
 }
 /* Базовые стили для мобильных и планшетов */
@@ -448,15 +594,10 @@ a {
 
     .nav-menu {
         margin-left: 40px;
-}
+    }
 
-}
-
-/* Базовые стили для медиа-запросов */
-@media (max-width: 1024px) {
-
-    .header-center_right {
-
+    .brend-wrap {
+        padding: 0 80px;
     }
 
     .nav-wrap {
@@ -488,6 +629,84 @@ a {
 
     }
 
+    .header-center-wrap {
+        max-width: 880px;
+        width: 100%;
+    }
+
+    .header-center_left {
+        max-width: 450px;
+        margin-right: 10px;
+    }
+
+    .header-center_left-title {
+        font-size: 32px;
+    }
+
+    .header-center_left-subtitle {
+        font-size: 20px;
+    }
+
+    .header-center-link {
+        padding: 20px 50px;
+        font-size: 18px;
+    }
+
+    .header-center_left-comment {
+        font-size: 18px;
+    }
+
+    .header-bottom_menu {
+        max-width: 350px;
+    }
+
+    .header-bottom-item__number {
+        font-size: 30px;
+    }
+
+    .header-bottom__item-description {
+        font-size: 14px;
+    }
+
+    .header-center_right {
+        max-width: 420px;
+    }
+
+    .about-us-title::after {
+        right: -10px;
+    }
+}
+
+/* Базовые стили для медиа-запросов */
+@media (max-width: 1024px) {
+    .nav-wrap {
+        max-width: 1000px;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .nav_logo-lang {
+        max-width: 862px;
+        width: 100%;
+    }
+
+    .nav-menu {
+        align-items: center;
+        justify-content: space-between;
+        max-width: 862px;
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .nav-menu_item{
+        margin-bottom: 10px;
+    }
+
+    .nav-logo {
+        width: 100%;
+
+    }
     /*heder center 1024 */
 
     .header-center_left {
@@ -533,8 +752,14 @@ a {
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 615px) {
 
+    .brend-wrap {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
     .container {
         max-width: 440px;
         padding: 0 8px;
@@ -598,5 +823,7 @@ a {
         max-height: 48px;
     }
 
-
+    .header-bottom_menu {
+        max-width: 370px;
+    }
 }
