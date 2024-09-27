@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TexService</title>
-    <link rel="stylesheet" href="css/style.css?v=1.3">
+    <link rel="stylesheet" href="css/style.css?v=1.2">
 </head>
 <body>
     <header class="header">
@@ -75,14 +75,57 @@
     </header>
     <section class="about-us">
         <div class="container">
-            <div class="about-us-title">
-                <p>Ремонт бытовой техники в Ташкенте– возвращение к жизни устройств</p>
+            <div class="about-us_wrap">
+                <div class="about-us-title">
+                    Ремонт бытовой техники в Ташкенте – возвращение к жизни устройств
+                </div>
+                <div class="about-us-subtitle">
+                    <p>Специалисты компании выполняют ремонтные работы в строгом соответствии со всеми техническими характеристиками определенного бытового прибора, а разумная стоимость услуг станет приятным бонусом к безупречному качеству.</p>
+                </div>
+                <div class="about-us-description">
+                    <p>Ремонт разнообразной техники – это приоритетное направление деятельности нашей компании. Мы являемся одной из ведущих мастерских по ремонту бытовой техники в Ташкенте, которая оказывает свои услуги независимо от места проживания клиента. Наши мастера приедут по вызову в любую точку Ташкента. Мы постоянно совершенствуем свою деятельность и полностью удовлетворяем все требования заказчика.</p>
+                </div>
             </div>
-            <div class="about-us-subtitle">
-                <p>Специалисты компании выполняют ремонтные работы в строгом соответствии со всеми техническими характеристиками определенного бытового прибора, а разумная стоимость услуг станет приятным бонусом к безупречному качеству.</p>
-            </div>
-            <div class="about-us-description">
-                <p>Ремонт разнообразной техники – это приоритетное направление деятельности нашей компании. Мы являемся одной из ведущих мастерских по ремонту бытовой техники в Ташкенте, которая оказывает свои услуги независимо от места проживания клиента. Наши мастера приедут по вызову в любую точку Ташкента. Мы постоянно совершенствуем свою деятельность и полностью удовлетворяем все требования заказчика.</p>
+        </div>
+    </section>
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="services-wrap">
+                <h2 class="section-title">Наши услуги</h2>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <img src="images/services_images/tv.png" alt="Телевизоры" class="service-icon">
+                        <h3 class="service-title">Телевизоры</h3>
+                    </div>
+                    <div class="service-item">
+                        <img src="images/services_images/washing-machine.png" alt="Стиральная машина" class="service-icon">
+                        <h3 class="service-title">Стиральная машина</h3>
+                    </div>
+                    <div class="service-item">
+                        <img src="images/services_images/dishwasher.png" alt="Посудомоечная машина" class="service-icon">
+                        <h3 class="service-title">Посудомоечная машина</h3>
+                    </div>
+                    <div class="service-item">
+                        <img src="images/services_images/vacuum-cleaner-.png" alt="Пылесос" class="service-icon">
+                        <h3 class="service-title">Пылесос</h3>
+                    </div>
+                    <div class="service-item">
+                        <img src="images/services_images/coffee-machine.png" alt="Кофемашины" class="service-icon">
+                        <h3 class="service-title">Кофемашины</h3>
+                    </div>
+                    <div class="service-item">
+                        <img src="images/services_images/microwave.png" alt="Микроволновая печь" class="service-icon">
+                        <h3 class="service-title">Микроволновая печь</h3>
+                    </div>
+                    <div class="service-item">
+                        <img src="images/services_images/oven-roast.png" alt="Электро духовка" class="service-icon">
+                        <h3 class="service-title">Электро духовка</h3>
+                    </div>
+                    <div class="service-item">
+                        <img src="images/services_images/fridge.png" alt="Холодильник" class="service-icon">
+                        <h3 class="service-title">Холодильник</h3>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -127,22 +170,29 @@
                     <button id="callOrderButton">Заказать звонок</button>
                 </div>
                 <div id="orderForm" class="order-form" style="display: none;" role="form" aria-labelledby="formTitle">
-                    <p id="formTitle" class="visually-hidden">Форма заказа звонка</p>
-                    <form id="orderFormElement" class="form-wrapper" method="POST">
-                        <div class="form-name">
-                            <label for="name">Ваше имя</label>
-                            <input type="text" id="name" name="name" required>
+                    <div class="form-container">
+                        <div class="order-form-header">
+                            <button id="closeFormButton" class="close-btn">&times;</button> <!-- Кнопка закрытия -->
                         </div>
-                        <div class="form-number">
-                            <label for="phone">Ваш телефон</label>
-                            <input type="tel" id="phone" name="phone" required>
+                        <div class="form-wrapper">
+                            <form id="orderFormElement" method="POST">
+                                <p id="formTitle" class="visually-hidden">Заказать звонок</p>
+                                <div class="form-name">
+                                    <label for="name">Ваше имя</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                <div class="form-number">
+                                    <label for="phone">Ваш телефон</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                                <p>Чтобы мы могли с вами связаться</p>
+                                <div class="form-button-wrap">
+                                    <button class="form-btn" type="submit">Отправить</button>
+                                    <div class="form-note">Нажимая на кнопку, я даю согласие на обработку своих персональных данных</div>
+                                </div>
+                            </form>
                         </div>
-                        <p>Чтобы мы могли с вами связаться</p>
-                        <div class="form-button-wrap">
-                            <button class="form-btn" type="submit">Отправить</button>
-                            <div class="form-note">Нажимая на кнопку, я даю согласие на обработку своих персональных данных</div>
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,91 +1,139 @@
 <!DOCTYPE html>
-<html lang="uz">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TexService</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=1.2">
 </head>
 <body>
     <header class="header">
         <nav class="nav">
             <div class="container">
-                <ul class="nav-menu">
-                    <li class="nav-menu_item">
-                        <a href="index.html"><div class="nav-logo"><img src="images/logo.svg" alt="Логотип">TexService</div></a>
-                    </li>
-                    <li class="nav-menu_item">
-                        <a href="https://yandex.ru/maps/-/CDwGQRM5" class="menu-location">
-                            <div class="location-icon"><img src="images/location-icon.svg" alt=""></div>
-                            <div class="menu-location_city">Toshkent</div>
+                <div class="nav-wrap">
+                    <div class="nav_logo-lang">
+                        <a href="index.html" class="nav-logo">
+                            <img src="images/logo.svg" alt="Логотип">
+                            <div class="nav-logo_text">TexSamsung</div>
                         </a>
-                    </li>
-                    <li class="nav-menu_item">
-                        <div class="time-icon"><img src="images/time-icon.svg" alt="Иконка часов"></div>
-                        <div class="nav-time-text">
-                            <div class="nav-time-text_title">Ish vaqti</div>
-                            <div class="nav-time-text_date">Biz 24/7 tanaffussiz va dam olish kunlarisiz ishlaymiz</div>
-                        </div>
-                    </li>
-                    <li class="nav-menu_item">
-                        <img src="images/tel-icon.svg" alt="Иконка телефона" class="tel-icon">
-                        <div class="nav-tel">
-                            <a href="tel:+998931281500" class="nav-tel_number1">+998931281500</a>
-                            <a href="tel:+998909597466" class="nav-tel_number">+998909597466</a>
-                        </div>
-                    </li>
-                    <a href="index.html" onclick="saveLanguageChoice('ru')">Русский</a>
-                </ul>
+                        <a class="language" href="index.html" onclick="saveLanguageChoice('ru')">Русский</a>
+                    </div>
+                    <ul class="nav-menu">
+                        <li class="nav-menu_item">
+                            <a href="https://yandex.ru/maps/-/CDHI487b" class="menu-location">
+                                <div class="location-icon"><img src="images/location-icon.svg" alt=""></div>
+                                <div class="menu-location_city">Toshkent</div>
+                            </a>
+                        </li>
+                        <li class="nav-menu_item">
+                            <div class="time-icon"><img src="images/time-icon.svg" alt="Иконка часов"></div>
+                            <div class="nav-time-text">
+                                <div class="nav-time-text_title">Ish vaqti</div>
+                                <div class="nav-time-text_date">Biz 24/7 <span class="time-text_none">uzluksiz va dam olish kunlarisiz ishlaymiz</span></div>
+                            </div>
+                        </li>
+                        <li class="nav-menu_item">
+                            <img src="images/tel-icon.svg" alt="Иконка телефона" class="tel-icon">
+                            <div class="nav-tel">
+                                <a href="tel:+998931281500" class="nav-tel_number1">+998931281500</a>
+                                <a href="tel:+998909597466" class="nav-tel_number">+998909597466</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
         <div class="header-center">
             <div class="container">
-                <div class="header-center_left">
-                    <div class="header-center_left-title">
-                        Toshkent shahridagi <br><span class="textservice">Tex SERVICE</span> servis markazi
+                <div class="header-center-wrap">
+                    <div class="header-center_left">
+                        <div class="header-center_left-title">
+                            Toshkentdagi <span class="textservice">Samsung</span> xizmat ko'rsatish markazi
+                        </div>
+                        <div class="header-center_left-subtitle"><span class="star">*</span> Ortiqcha xarajatlarsiz foydalaning</div>
+                        <a href="tel:+998909597466" class="header-center-link">Ustani chaqirish</a>
+                        <div class="header-center_left-comment"><span class="star">*</span> Chiqish va diagnostika bepul</div>
+                        <ul class="header-bottom_menu">
+                            <li class="header-bottom_menu-item">
+                                <div class="header-bottom-item__number">15</div>
+                                <div class="header-bottom__item-description">yillik tajriba</div>
+                            </li>
+                            <li class="header-bottom_menu-item">
+                                <div class="header-bottom-item__number">18130</div>
+                                <div class="header-bottom__item-description">ta ta'mirlangan texnika</div>
+                            </li>
+                            <li class="header-bottom_menu-item">
+                                <div class="header-bottom-item__number">1273</div>
+                                <div class="header-bottom__item-description">doimiy mijozlar</div>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="header-center_left-subtitle">Qo'shimcha xarajatlardan saqlaning</div>
-                    <a href="tel:+998909597466" class="header-center-link">texnikni chaqiring</a>
-                    <div class="header-center_left-comment"><span class="star">*</span> Bepul tashrif va diagnostika</div>
+                    <div class="header-center_right"><img class="bg-img" src="images/header-photo.svg" alt=""></div>
                 </div>
-            
             </div>
         </div>
-        <div class="header-bottom">
-            <div class="container">
-                <ul class="header-bottom_menu">
-                    <li class="header-bottom_menu-item">
-                        <div class="header-bottom-item__number">15</div>
-                        <div class="header-bottom__item-description">Yillik tajriba</div>
-                    </li>
-                    <li class="header-bottom_menu-item">
-                        <div class="header-bottom-item__number">18130</div>
-                        <div class="header-bottom__item-description">Ta'mirlangan uskunalar</div>
-                    </li>
-                    <li class="header-bottom_menu-item">
-                        <div class="header-bottom-item__number">1273</div>
-                        <div class="header-bottom__item-description">Doimiy mijozlar</div>
-                    </li>
-                </ul>
-            </div>
-        </div>  
     </header>
     <section class="about-us">
         <div class="container">
-            <div class="about-us-title">
-                <p>Toshkentda maishiy texnika ta'mirlash – qurilmalarni hayotga qaytarish</p>
+            <div class="about-us_wrap">
+                <div class="about-us-title">
+                    Toshkentda maishiy texnika ta'miri – qurilmalarni qayta hayotga qaytarish.
+                </div>
+                <div class="about-us-subtitle">
+                    <p>
+                        Kompaniya mutaxassislari maishiy texnikaning belgilangan texnik xususiyatlariga qat'iy rioya qilgan holda ta'mirlash ishlarini amalga oshiradilar, xizmatlarning maqbul narxi esa mukammal sifatga yoqimli qo'shimcha bo'ladi.
+                    </p>
+                </div>
+                <div class="about-us-description">
+                    <p>Turli xil texnikalarni ta'mirlash kompaniyamizning ustuvor yo'nalishidir. Biz Toshkentdagi yetakchi maishiy texnika ta'mirlash ustaxonalaridan birimiz va mijozlar yashash joyidan qat'i nazar o'z xizmatlarimizni taqdim etamiz. Bizning ustalarimiz Toshkentning istalgan nuqtasiga chaqiruv bo'yicha boradilar. Biz o'z faoliyatimizni doimiy ravishda takomillashtirib boramiz va mijozlarning barcha talablarini to'liq qondiramiz.</p>
+                </div>
             </div>
-            <div class="about-us-subtitle">
-                <p>Kompaniyaning mutaxassislari ma'lum bir maishiy texnikaning barcha texnik xususiyatlariga qat'iy muvofiq ta'mirlash ishlarini olib boradilar va xizmatlarning maqbul narxi benuqson sifatga yoqimli bonus bo'ladi.</p>
-            </div>
-            <div class="about-us-description">
-                <p>Turli jihozlarni ta'mirlash kompaniyamiz faoliyatining ustuvor yo'nalishi hisoblanadi. Biz Toshkentdagi maishiy texnika ta'mirlash ustaxonalaridan biri bo'lib, mijozning yashash joyidan qat'iy nazar o'z xizmatlarini ko'rsatadi. Bizning ustalarimiz Toshkentning istalgan nuqtasiga qo'ng'iroq bo'yicha yetib kelishadi. Biz doimiy ravishda o'z faoliyatimizni takomillashtiramiz va mijozlarning barcha talablarini to'liq qondiramiz.</p>
+        </div>
+    </section>
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="services-wrap">
+                <h2 class="section-title">Xizmatlarimiz</h2>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <img src="images/services_images/tv.png" alt="Телевизоры" class="service-icon">
+                        <h3 class="service-title">Televizorlar</h3>
+                    </div>
+                    <div class="service-item">
+                        <img src="images/services_images/washing-machine.png" alt="Стиральная машина" class="service-icon">
+                        <h3 class="service-title">Kir yuvish mashinasi</h3>
+                    </div>
+                    <div class="service-item">
+                        <img src="images/services_images/dishwasher.png" alt="Посудомоечная машина" class="service-icon">
+                        <h3 class="service-title">Idish yuvish mashinasi</h3>
+                    </div>
+                    <div class="service-item">
+                        <img src="images/services_images/vacuum-cleaner-.png" alt="Пылесос" class="service-icon">
+                        <h3 class="service-title">Changyutgich</h3>
+                    </div>
+                    <div class="service-item">
+                        <img src="images/services_images/coffee-machine.png" alt="Кофемашины" class="service-icon">
+                        <h3 class="service-title">Qahva mashinalari</h3>
+                    </div>
+                    <div class="service-item">
+                        <img src="images/services_images/microwave.png" alt="Микроволновая печь" class="service-icon">
+                        <h3 class="service-title">Mikroto'lqinli pech</h3>
+                    </div>
+                    <div class="service-item">
+                        <img src="images/services_images/oven-roast.png" alt="Электро духовка" class="service-icon">
+                        <h3 class="service-title">Elektr pech</h3>
+                    </div>
+                    <div class="service-item">
+                        <img src="images/services_images/fridge.png" alt="Холодильник" class="service-icon">
+                        <h3 class="service-title">Muzlatgich</h3>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     <section class="brend">
         <div class="container">
-            <div class="brend-title">Biz ta'mirlaydigan maishiy texnika brendlari</div>
+            <div class="brend-title">Biz ta'mirlaydigan maishiy texnika markalari</div>
             <div class="brend-wrap">
                 <div class="brend-wrap_logo"><img src="images/logo-firms/logo-marka1.png" alt=""></div>
                 <div class="brend-wrap_logo"><img src="images/logo-firms/logo-marka2.png" alt=""></div>
@@ -112,12 +160,47 @@
                 <div class="brend-wrap_logo"><img src="images/logo-firms/logo-marka23.png" alt=""></div>
                 <div class="brend-wrap_logo"><img src="images/logo-firms/logo-marka24.png" alt=""></div>
             </div>
-            <div class="brend-subtitle">Ro'yxatda brendingizni topa olmadingizmi yoki hali ham savollaringiz bormi? Xavotir olmang!</div>
-            <div class="brend-description">
-                Biz ko'pchilik marka va modellarni, hatto unchalik taniqli bo'lmaganlarini ham ta'mirlaymiz. Faqat biz bilan bog'laning va bilib oling!
+            <div class="brend-text_wrap">
+                <div class="brend-text_wrap-left">
+                    <div class="brend-subtitle">Ro‘yxatda o‘zingizning markangizni topa olmadingizmi yoki savollaringiz bormi? Xavotir olmang!</div>
+                    <div class="brend-description">
+                        Biz ko‘pchilik ma'lum va nom ma'lum bo‘lmagan markalar va modellarning ta'mirini amalga oshiramiz.
+                    </div>
+                    <div class="brend-number">Shunchaki biz bilan bog‘laning va aniqlang: +998 (93) 128-15-00</div>
+                </div>
+                <div class="brend-text_wrap-right">
+                    <button id="callOrderButton">Qo‘ng‘iroq buyurtma qilish</button>
+                </div>
+                <div id="orderForm" class="order-form" style="display: none;" role="form" aria-labelledby="formTitle">
+                    <div class="form-container">
+                        <div class="order-form-header">
+                            <button id="closeFormButton" class="close-btn">&times;</button> <!-- Кнопка закрытия -->
+                        </div>
+                        <div class="form-wrapper">
+                            <form id="orderFormElement" method="POST">
+                                <p id="formTitle" class="visually-hidden">Qo‘ng‘iroq buyurtma qilish</p>
+                                <div class="form-name">
+                                    <label for="name">Ismingiz</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                <div class="form-number">
+                                    <label for="phone">Telefoningiz</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                                <p>Siz bilan bog‘lanishimiz uchun</p>
+                                <div class="form-button-wrap">
+                                    <button class="form-btn" type="submit">Yuborish</button>
+                                    <div class="form-note">Tugmani bosish orqali men o‘z shaxsiy ma'lumotlarimni qayta ishlashga rozilik bildiraman.</div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+    <script src="https://unpkg.com/inputmask@5.0.9"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

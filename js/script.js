@@ -30,11 +30,32 @@ function getCurrentLanguage() {
 document.addEventListener('DOMContentLoaded', function() {
     checkAndRedirectBasedOnLanguage();
 
-    // Обработчик событий для кнопки вызова формы
     var callOrderButton = document.getElementById('callOrderButton');
-    callOrderButton.addEventListener('click', function() {
-        var form = document.getElementById('orderForm');
-        if (form.classList.contains('visible')) {
+    var closeFormButton = document.getElementById('closeFormButton');
+    var form = document.getElementById('orderForm');
+
+    // Добавляем отладку, чтобы убедиться, что кнопки найдены
+    console.log('callOrderButton найден?', !!callOrderButton);
+    console.log('closeFormButton найден?', !!closeFormButton);
+    console.log('form найден?', !!form);
+
+    // Открытие формы
+    if (callOrderButton) {
+        callOrderButton.addEventListener('click', function() {
+            form.style.display = 'flex';
+            setTimeout(function() {
+                form.style.opacity = '1';
+                form.classList.add('visible');
+            }, 10);
+        });
+    } else {
+        console.error('callOrderButton не найден');
+    }
+
+    // Закрытие формы
+    if (closeFormButton) {
+        closeFormButton.addEventListener('click', function() {
+            console.log('Закрытие формы'); // Добавляем лог для проверки клика
             form.classList.remove('visible');
             setTimeout(function() {
                 form.style.opacity = '0';
@@ -42,16 +63,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     form.style.display = 'none';
                 }, 500);
             }, 10);
-        } else {
-            form.style.display = 'flex';
-            setTimeout(function() {
-                form.style.opacity = '1';
-                form.classList.add('visible');
-            }, 10);
-        }
-    });
+        });
+    } else {
+        console.error('closeFormButton не найден');
+    }
 
-    // Инициализация маски ввода для поля телефона
+    // Инициализация маски для телефона
     var phoneInput = document.getElementById('phone');
     var maskOptions = {
         mask: "+\\9\\98 (99) 999-99-99",
@@ -63,8 +80,8 @@ document.addEventListener('DOMContentLoaded', function() {
     var phoneMask = new Inputmask(maskOptions);
     phoneMask.mask(phoneInput);
 
-    // Обработка отправки формы без перезагрузки страницы
-    document.querySelector('form').addEventListener('submit', function(event) {
+    // Обработка отправки формы через AJAX
+    document.getElementById('orderFormElement').addEventListener('submit', function(event) {
         event.preventDefault();
         var formData = new FormData(this);
         fetch('php/submit_form.php', {
@@ -79,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 icon: 'success',
                 confirmButtonText: 'ОК'
             });
-            document.getElementById('orderForm').style.display = 'none'; // Скрыть форму после отправки
+            form.style.display = 'none'; // Скрыть форму после отправки
         })
         .catch(error => {
             console.error('Ошибка:', error);
@@ -91,4 +108,4 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
-    });
+});

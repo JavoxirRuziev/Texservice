@@ -280,9 +280,19 @@ a {
 }
 
 /*ABOUT-US СТИЛИ--------------------------------------------*/
+.about-us {
+    padding: 25px 0;
+}
+
+.about-us_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .about-us-title {
     text-align: center;
-    font-size: 36px;
+    font-size: 42px;
     color: #201f1f;
     position: relative;
     margin-bottom: 10px;
@@ -302,14 +312,19 @@ a {
 .about-us-subtitle p {
     text-align: center;
     color: #2d2626;
-    font-size: 18px;
+    font-size: 24px;
     line-height: 1.3;
     font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 .about-us-description p {
-    font-size: 16px;
+    max-width: 1400px;
+    width: 100%;
+    font-size: 18px;
     line-height: 1.4;
     text-align: justify;
+    margin: 0;
 }
 
 /*section BREND стили*/
@@ -403,6 +418,25 @@ a {
     transition: box-shadow 0.5s, transform 0.5s;
 }
 
+/*стили формы*/
+
+.form-container {
+    background: #f9f9f9;
+    max-width: 600px;
+    width: 100%;
+    padding: 5px 10px 50px 10px;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    padding: 0px 50px;
+    justify-content: center;
+}
+
 #orderForm {
     display: none;
     opacity: 0; /* Начальное значение opacity для скрытия */
@@ -426,15 +460,24 @@ a {
     background: rgba(45, 45, 50, 0.4);
 }
 
-.form-wrapper {
-    width: 100%;
-    max-width: 700px;
+.order-form-header {
     display: flex;
-    flex-direction: column;
-    padding: 50px 75px;
-    background: #f9f9f9;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    justify-content: flex-end; /* Размещаем кнопку закрытия справа */
+    width: 100%;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+    margin-right: 0; /* Можно убрать лишний отступ */
+}
+
+.close-btn:hover {
+    color: #ff0000;
+    transition: all 0.5s;
 }
 
 .form-name {
@@ -479,7 +522,7 @@ a {
 }
 
 .form-wrapper p {
-    margin-top: 5px;
+    margin-top: 20px;
     color: #898686;
 }
 
@@ -498,19 +541,87 @@ a {
 }
 
 .form-note {
-    max-width: 400px;
+    max-width: 300px;
     width: 100%;
     font-size: 16px;
     color: #898686;
+    margin-left: 10px;
 }
 
 .form-button-wrap {
     width: 100%;
-    max-width: 600px;
+    max-width: 460px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
+.visually-hidden {
+    font-size: 30px;
+    text-align: center;
+    color: #0590D1;
+}
+
+/* Стили для секции "Наши услуги" */
+.services-section {
+    padding: 30px 0;
+    background-color: #f4f4f4;
+}
+
+.services-wrap {
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 40px;
+    margin-top: 0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 200px); /* Минимальная ширина каждого элемента 200px */
+    gap: 50px;
+    justify-items: center;
+    justify-content: center
+}
+
+.service-item {
+    background-color: #fff;
+    padding: 25px 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    max-width: 200px; /* Ограничение максимальной ширины */
+    width: 100%; /* Установка одинаковой ширины */
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+}
+
+.service-icon {
+    width: 60px;
+    height: auto;
+    margin-bottom: 20px;
+    transition: width 0.3s ease; /* Плавное изменение размера */
+}
+
+.service-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0391D3;
+    margin: 0;
+}
+
 
 /*.brend-text_wrap-right button {
     padding: 10px 15px;
@@ -526,7 +637,6 @@ a {
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25); 
     transition: 0.3s all;
 }
-
 
 .brend-text_wrap-right button:hover{
     background-color: #08171e;
@@ -564,7 +674,7 @@ a {
 /* Базовые стили для мобильных и планшетов */
 @media (max-width: 1537px) {
     .nav-menu {
-        max-width: 850px;
+        max-width: 950px;
         width: 100%;
 }
 
@@ -757,6 +867,50 @@ a {
     .brend-wrap {
         padding: 0 10px;
     }
+
+    .form-container {
+        padding: 15px 20px;
+    }
+
+    .form-wrapper {
+        padding: 0 10px;
+    }
+
+    .form-name, .form-number {
+        font-size: 14px;
+    }
+
+    .form-wrapper input {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .form-btn {
+        font-size: 14px;
+        padding: 12px 20px;
+    }
+
+    .form-note {
+        font-size: 12px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr); /* Два элемента в строке */
+        gap: 30px;
+    }
+
+    .service-item {
+        max-width: 150px;
+    }
+
+    .service-title {
+        font-size: 18px;
+    }
+
+    .service-icon {
+        width: 50px;
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -825,5 +979,32 @@ a {
 
     .header-bottom_menu {
         max-width: 370px;
+    }
+
+    .form-container {
+        padding: 10px 25px;
+        max-width: 350px;
+    }
+
+    .form-wrapper {
+        padding: 0 5px;
+    }
+
+    .form-name, .form-number {
+        font-size: 12px;
+    }
+
+    .form-wrapper input {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .form-btn {
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+
+    .form-note {
+        font-size: 10px;
     }
 }
