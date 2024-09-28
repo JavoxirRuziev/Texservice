@@ -55,7 +55,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Закрытие формы
     if (closeFormButton) {
         closeFormButton.addEventListener('click', function() {
-            console.log('Закрытие формы'); // Добавляем лог для проверки клика
             form.classList.remove('visible');
             setTimeout(function() {
                 form.style.opacity = '0';
@@ -67,6 +66,30 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.error('closeFormButton не найден');
     }
+        // форма для скидки
+    var form = document.getElementById('orderForm');
+    var getDiscountButton = document.getElementById('getDiscountButton');
+    var closeFormButton = document.getElementById('closeFormButton');
+
+    // Открытие формы
+    getDiscountButton.addEventListener('click', function() {
+        form.style.display = 'flex';
+        setTimeout(function() {
+            form.style.opacity = '1';
+            form.classList.add('visible');
+        }, 10);
+    });
+
+    // Закрытие формы
+    closeFormButton.addEventListener('click', function() {
+        form.classList.remove('visible');
+        setTimeout(function() {
+            form.style.opacity = '0';
+            setTimeout(function() {
+                form.style.display = 'none';
+            }, 500);
+        }, 10);
+    });
 
     // Инициализация маски для телефона
     var phoneInput = document.getElementById('phone');

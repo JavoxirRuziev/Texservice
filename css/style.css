@@ -369,7 +369,6 @@ a {
 
 .brend-text_wrap {
     padding: 20px;
-    background: #f4f4f4;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -622,7 +621,78 @@ a {
     margin: 0;
 }
 
+/* Секция скидки */
+.discount-section {
+    background: #3CA7DB;
+    padding: 50px 0;
+}
 
+.discount-content {
+    max-width: 1300px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Для адаптивности */
+    margin: 0 auto;
+}
+
+.discount-left {
+    flex: 1;
+    max-width: 600px;
+}
+
+.discount-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.discount-subtitle {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 20px;
+    line-height: 20px;
+    font-weight: normal;
+}
+
+.discount-btn {
+    padding: 15px 30px;
+    background-color: #F3393A;
+    color: #fff;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.discount-btn:hover {
+    background-color: #08171e;
+    color: #a5c9f9;
+}
+
+.discount-btn:active {
+    background-color: #F3393A;
+    color: #a5c9f9;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25); 
+    transform: scale(1.2);
+    box-shadow: 0 0 15px 7px rgba(34, 60, 80, 0.2);
+    transition: box-shadow 0.5s, transform 0.5s;
+}
+
+.discount-right {
+    flex: 1;
+    max-width: 500px;
+    text-align: center;
+}
+
+.discount-image {
+    width: 100%;
+    height: auto;
+}
 /*.brend-text_wrap-right button {
     padding: 10px 15px;
     margin-left: 20px;
@@ -909,6 +979,15 @@ a {
 
     .service-icon {
         width: 50px;
+    }
+
+    .discount-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .discount-left, .discount-right {
+        max-width: 100%;
     }
 
 }

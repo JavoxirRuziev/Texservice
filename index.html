@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TexService</title>
-    <link rel="stylesheet" href="css/style.css?v=1.2">
+    <link rel="stylesheet" href="css/style.css?v=1.5">
 </head>
 <body>
     <header class="header">
@@ -68,7 +68,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="header-center_right"><img class="bg-img" src="images/header-photo.svg" alt=""></div>
+                    <div class="header-center_right"><img class="bg-img" src="images/header-photo.svg" alt="фото"></div>
                 </div>
             </div>
         </div>
@@ -193,6 +193,47 @@
                             </form>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="discount-section">
+        <div class="container">
+            <div class="discount-content">
+                <div class="discount-left">
+                    <h2 class="discount-title">Получите скидку 20% прямо сейчас!</h2>
+                    <div class="discount-subtitle">Вы выбираете Tex SERVICE, и в знак нашей благодарности мы предлагаем всем нашим уважаемым пенсионерам и инвалидам осеннюю скидку 20% на все виды ремонтных работ. Ваш выбор ценен для нас, и мы стремимся сделать обслуживание в нашем центре максимально доступным и удобным для вас.</div>
+                    <button class="discount-btn" id="getDiscountButton">Получить скидку</button>
+                <!-- Форма для получения скидки -->
+                <div id="orderForm" class="order-form" style="display: none;" role="form" aria-labelledby="formTitle">
+                    <div class="form-container">
+                        <div class="order-form-header">
+                            <button id="closeFormButton" class="close-btn">&times;</button> <!-- Кнопка закрытия -->
+                        </div>
+                        <div class="form-wrapper">
+                            <form id="orderFormElement" method="POST">
+                                <p id="formTitle" class="visually-hidden">Заказать звонок для скидки</p>
+                                <div class="form-name">
+                                    <label for="name">Ваше имя</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                <div class="form-number">
+                                    <label for="phone">Ваш телефон</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                                <p>Чтобы мы могли с вами связаться</p>
+                                <div class="form-button-wrap">
+                                    <button class="form-btn" type="submit">Отправить</button>
+                                    <div class="form-note">Нажимая на кнопку, я даю согласие на обработку своих персональных данных</div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                    
+                </div>
+                <div class="discount-right">
+                    <img src="images/discount-img.svg" alt="Фото мужчины" class="discount-image">
                 </div>
             </div>
         </div>
