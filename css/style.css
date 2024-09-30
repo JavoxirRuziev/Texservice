@@ -604,7 +604,7 @@ a {
 }
 
 .service-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
 }
 
 .service-icon {
@@ -667,6 +667,7 @@ a {
     font-weight: bold;
     text-transform: uppercase;
     transition: 0.3s;
+    margin-bottom: 10px;
 }
 
 .discount-btn:hover {
@@ -693,6 +694,85 @@ a {
     width: 100%;
     height: auto;
 }
+
+/*SECTION PROCESS*/
+.process {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.process-wrap {
+    max-width: 1300px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    gap: 10px;
+    justify-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.process-item {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    padding-top: 0;
+    padding-bottom: 40px;
+    max-width: 350px;
+    text-align: center;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+
+
+.process-item:hover {
+    transform: translateY(-10px);
+}
+
+.process-item-step {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0391D3;
+    max-width: 50px;
+    margin: 0 auto; /* Центрирование блока */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.process-item_text-img {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.process-icon {
+    width: 60px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.process-item-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.process-item-subtitle {
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+}
+
 /*.brend-text_wrap-right button {
     padding: 10px 15px;
     margin-left: 20px;
@@ -933,7 +1013,6 @@ a {
 }
 
 @media (max-width: 615px) {
-
     .brend-wrap {
         padding: 0 10px;
     }
@@ -990,12 +1069,32 @@ a {
         max-width: 100%;
     }
 
+    .process-wrap {
+        grid-template-columns: repeat(2, 1fr); /* Переход на 1 колонку */
+        gap: 20px;
+    }
+
+    .process-item {
+        max-width: 100%;
+    }
+
+    .process-item-title {
+        font-size: 12px;
+    }
+
+    .process-item-subtitle {
+        font-size: 12px;
+    }
+
+    .process-icon {
+        width: 30px;
+    }
+
 }
 
 @media (max-width: 480px) {
     .container {
         max-width: 440px;
-        padding: 0 8px;
     }
 
     .header-center_right {
@@ -1003,7 +1102,7 @@ a {
     }
 
     .nav-wrap {
-        max-width: 430px;
+        max-width: 420px;
         width: 100%;
         flex-direction: column;
     }
