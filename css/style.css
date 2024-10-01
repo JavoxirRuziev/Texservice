@@ -285,9 +285,12 @@ a {
 }
 
 .about-us_wrap {
+    max-width: 1400px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 auto;
 }
 
 .about-us-title {
@@ -773,6 +776,88 @@ a {
     text-align: center;
 }
 
+/* Основные стили для футера */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.footer-left,
+.footer-middle,
+.footer-right {
+    flex: 1;
+    max-width: 300px;
+    min-width: 200px;
+    padding: 10px;
+}
+
+.footer-logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+.footer-description {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.footer-middle h3,
+.footer-right h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.footer-middle p,
+.footer-right p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-middle a,
+.footer-right a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-middle a:hover,
+.footer-right a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.social-icon:hover img {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    background-color: #222;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #bbb;
+}
+
 /*.brend-text_wrap-right button {
     padding: 10px 15px;
     margin-left: 20px;
@@ -1184,5 +1269,57 @@ a {
 
     .form-note {
         font-size: 10px;
+    }
+
+    .footer {
+        padding: 30px 10px; /* Уменьшаем отступы */
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .footer-left,
+    .footer-middle,
+    .footer-right {
+        flex: 1 1 100%;
+        max-width: none;
+        min-width: auto;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    .footer-left img {
+        max-width: 120px; /* Уменьшение размера логотипа для компактности */
+    }
+
+    .footer-description {
+        font-size: 14px;
+    }
+
+    .footer-middle h3,
+    .footer-right h3 {
+        font-size: 18px;
+    }
+
+    .footer-middle p,
+    .footer-right p {
+        font-size: 14px;
+    }
+
+    .social-icons {
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .social-icon img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .footer-bottom {
+        font-size: 12px;
     }
 }

@@ -35,9 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
     var form = document.getElementById('orderForm');
 
     // Добавляем отладку, чтобы убедиться, что кнопки найдены
-    console.log('callOrderButton найден?', !!callOrderButton);
-    console.log('closeFormButton найден?', !!closeFormButton);
-    console.log('form найден?', !!form);
 
     // Открытие формы
     if (callOrderButton) {
