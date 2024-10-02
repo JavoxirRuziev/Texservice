@@ -776,6 +776,45 @@ a {
     text-align: center;
 }
 
+/* Основные стили для секции видео */
+
+.video-section {
+    padding: 50px 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.video-grid {
+    display: flex;
+    justify-content: center;
+}
+
+.video-item {
+    max-width: 400px; /* Максимальная ширина для видео */
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+video {
+    width: 100%; /* Видео будет адаптироваться по ширине контейнера */
+    height: auto;
+    border-radius: 10px; /* Округленные углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
+.video-title {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #0391D3;
+}
+
 /* Основные стили для футера */
 .footer {
     background-color: #333;
@@ -1099,7 +1138,7 @@ a {
 
 @media (max-width: 615px) {
     .brend-wrap {
-        padding: 0 10px;
+        padding: 0 5px;
     }
 
     .form-container {
@@ -1145,6 +1184,10 @@ a {
         width: 50px;
     }
 
+    .discount-section {
+        padding: 15px 0;
+    }
+
     .discount-content {
         flex-direction: column;
         text-align: center;
@@ -1156,25 +1199,29 @@ a {
 
     .process-wrap {
         grid-template-columns: repeat(2, 1fr); /* Переход на 1 колонку */
-        gap: 20px;
     }
 
     .process-item {
         max-width: 100%;
+        margin-bottom: 10px;
+        padding: 8px;
     }
 
     .process-item-title {
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .process-item-subtitle {
-        font-size: 12px;
+        font-size: 9px;
     }
 
     .process-icon {
         width: 30px;
     }
 
+    .process-item-step {
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 480px) {
